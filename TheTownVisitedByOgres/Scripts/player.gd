@@ -13,10 +13,12 @@ func _ready():
 func _physics_process(delta):
 	player_movement(delta)
 	current_camera()
+##	if Input.is_action_just_pressed("interact"):
+##		exectute_interactions()
+
+func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		exectute_interactions()
-		DialogueManager.show_example_dialogue_balloon(load("res://Dialogs/NoReturn.dialogue"))
-		return
 
 func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -101,5 +103,6 @@ func update_interactions():
 func exectute_interactions():
 	if all_interactions:
 		var curr_intearction = all_interactions[0]
-		match curr_intearction.interactable_type:
-			"print_text" : print(curr_intearction.interactable_value)
+		curr_intearction.interact()
+		print(":3")
+		return
