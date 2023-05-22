@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://cds3hhr7ftj78"
+path="res://.godot/imported/HillStorageHouse.dialogue-d8c6bb5491ad81e72ebaf3b57be5e4b4.tres"
+
+[deps]
+
+source_file="res://Dialogs/HillStorageHouse.dialogue"
+dest_files=["res://.godot/imported/HillStorageHouse.dialogue-d8c6bb5491ad81e72ebaf3b57be5e4b4.tres"]
+
+[params]
+
