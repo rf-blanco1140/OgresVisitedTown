@@ -99,6 +99,7 @@ dialog_resoruce = ExtResource("5_0rr3v")
 [node name="Axe" parent="House/Interactions" instance=ExtResource("4_nexg7")]
 position = Vector2(167, -24)
 dialog_resoruce = ExtResource("6_y5psd")
+num_interact_total = 2
 
 [connection signal="body_entered" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_entered"]
 [connection signal="body_exited" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_exited"]
