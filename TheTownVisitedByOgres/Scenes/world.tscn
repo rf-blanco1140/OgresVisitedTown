@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgpwmv1ifbxns"]
+[gd_scene load_steps=11 format=3 uid="uid://dgpwmv1ifbxns"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_lkho6"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="2_8qly3"]
 [ext_resource type="PackedScene" uid="uid://o82thxf3f15u" path="res://Scenes/Game Components/interact_area.tscn" id="4_nexg7"]
 [ext_resource type="Resource" uid="uid://cds3hhr7ftj78" path="res://Dialogs/HillStorageHouse.dialogue" id="5_0rr3v"]
 [ext_resource type="Resource" uid="uid://b4g2pamvuw6mf" path="res://Dialogs/HillAxe.dialogue" id="6_y5psd"]
+[ext_resource type="Resource" uid="uid://cd2w5hi1vnftd" path="res://Dialogs/PotatoBoxes.dialogue" id="7_y8ft3"]
 [ext_resource type="PackedScene" uid="uid://byspofj24xg1f" path="res://Scenes/player.tscn" id="8_komro"]
+[ext_resource type="Resource" uid="uid://rliojk4yog6e" path="res://Dialogs/RoadWagon.dialogue" id="8_s2wfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpbfh"]
 size = Vector2(21, 36)
@@ -94,7 +96,7 @@ shape = SubResource("RectangleShape2D_0kwav")
 
 [node name="Collision_CenterHill" type="CollisionPolygon2D" parent="House/StaticBody2D_HillHouse"]
 position = Vector2(100, -11)
-polygon = PackedVector2Array(11, 11, -34, 11, -34, -82, 90, -82, 90, 9, 44, 10, 43, -2, 80, -2, 80, -79, -25, -79, -25, -3, 11, -3)
+polygon = PackedVector2Array(11, 11, -25.2613, 11, -35, 7, -34, -72.3534, -30, -83, 82, -83, 90, -71.0291, 91, 2, 88, 9, 44, 10, 43, -2, 80, -2, 80, -79, -25, -79, -25, -3, 11, -3)
 
 [node name="Interactions" type="Node2D" parent="House"]
 
@@ -105,9 +107,38 @@ dialog_resoruce = ExtResource("5_0rr3v")
 
 [node name="Axe" parent="House/Interactions" instance=ExtResource("4_nexg7")]
 position = Vector2(167, -24)
-interactable_label = "Inspect"
+interactable_label = "Inspect "
 dialog_resoruce = ExtResource("6_y5psd")
 num_interact_total = 2
+
+[node name="Potato Caravan" type="Node2D" parent="."]
+
+[node name="Potato Boxes" type="Node2D" parent="Potato Caravan"]
+
+[node name="Interactable" parent="Potato Caravan/Potato Boxes" instance=ExtResource("4_nexg7")]
+position = Vector2(248, 32)
+interactable_label = "Inspect"
+dialog_resoruce = ExtResource("7_y8ft3")
+num_interact_total = 4
+
+[node name="Road Wagon 1" type="Node2D" parent="Potato Caravan"]
+
+[node name="Interactable" parent="Potato Caravan/Road Wagon 1" instance=ExtResource("4_nexg7")]
+position = Vector2(220, 37)
+dialog_resoruce = ExtResource("8_s2wfn")
+
+[node name="Road Wagon 2" type="Node2D" parent="Potato Caravan"]
+
+[node name="Interactable" parent="Potato Caravan/Road Wagon 2" instance=ExtResource("4_nexg7")]
+position = Vector2(285, 61)
+interactable_label = "Inspect"
+dialog_resoruce = ExtResource("8_s2wfn")
+
+[node name="Clothe Bags" type="Node2D" parent="Potato Caravan"]
+
+[node name="Interactable" parent="Potato Caravan/Clothe Bags" instance=ExtResource("4_nexg7")]
+position = Vector2(283, 36)
+interactable_label = "Inspect"
 
 [connection signal="body_entered" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_entered"]
 [connection signal="body_exited" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_exited"]
