@@ -9,6 +9,7 @@ func _ready():
 	else:
 		$player.position.x = global.player_exit_secretentance_x
 		$player.position.y = global.player_exit_secretentance_y
+	MusicController.play_music()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

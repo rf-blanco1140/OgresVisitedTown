@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://tmojxe52x2y6"
+path="res://.godot/imported/Desert Town (Loop).wav-6ab459ad47ddb28a00a3a9edc9ee1ece.sample"
+
+[deps]
+
+source_file="res://Sounds/Desert Town (Loop).wav"
+dest_files=["res://.godot/imported/Desert Town (Loop).wav-6ab459ad47ddb28a00a3a9edc9ee1ece.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
