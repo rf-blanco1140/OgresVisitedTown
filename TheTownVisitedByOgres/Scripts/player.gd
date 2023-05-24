@@ -104,5 +104,11 @@ func exectute_interactions():
 	if all_interactions:
 		var curr_intearction = all_interactions[0]
 		curr_intearction.interact()
-		print(":3")
+		turn_interactLabel_OnOff()
 		return
+
+# Player UI
+#########################################################
+func turn_interactLabel_OnOff():
+	if all_interactions[0].num_interact_total == all_interactions[0].num_interact_curr:
+		$InteractionComponents/InteractLabel.add_theme_color_override("font_color", Color.GRAY)
