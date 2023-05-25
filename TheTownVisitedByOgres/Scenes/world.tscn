@@ -125,6 +125,7 @@ num_interact_total = 4
 
 [node name="Interactable" parent="Potato Caravan/Road Wagon 1" instance=ExtResource("4_nexg7")]
 position = Vector2(220, 37)
+interactable_label = "Inspect"
 dialog_resoruce = ExtResource("8_s2wfn")
 
 [node name="Road Wagon 2" type="Node2D" parent="Potato Caravan"]
