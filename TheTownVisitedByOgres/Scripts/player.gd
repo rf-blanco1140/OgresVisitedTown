@@ -4,11 +4,12 @@ const speed = 50
 var current_dir = "none"
 
 @onready var all_interactions = []
-@onready var interact_label = $InteractionComponents/InteractLabel
+@onready var interact_label = $InteractionComponents/Panel/InteractLabel
 
 func _ready():
 	$AnimatedSprite2D.play("idle_right")
 	update_interactions()
+	turn_panel_OnOff()
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -89,10 +90,13 @@ func player():
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
 	update_interactions()
+	turn_panel_OnOff()
+	turn_interactLabel_OnOff()
 
 func _on_interaction_area_area_exited(area):
 	all_interactions.erase(area)
 	update_interactions()
+	turn_panel_OnOff()
 
 func update_interactions():
 	if all_interactions:
@@ -105,10 +109,18 @@ func exectute_interactions():
 		var curr_intearction = all_interactions[0]
 		curr_intearction.interact()
 		turn_interactLabel_OnOff()
-		return
 
 # Player UI
 #########################################################
 func turn_interactLabel_OnOff():
 	if all_interactions[0].num_interact_total == all_interactions[0].num_interact_curr:
-		$InteractionComponents/InteractLabel.add_theme_color_override("font_color", Color.GRAY)
+		$InteractionComponents/Panel/InteractLabel.add_theme_color_override("font_color", Color.GRAY)
+		print("No Interactions")
+	else:
+		$InteractionComponents/Panel/InteractLabel.add_theme_color_override("font_color", Color.WHITE)
+		print("Yes Interactions!")
+func turn_panel_OnOff():
+	if all_interactions:
+		$InteractionComponents/Panel.visible = true
+	else:
+		$InteractionComponents/Panel.visible = false

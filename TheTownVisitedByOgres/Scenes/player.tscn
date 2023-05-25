@@ -469,17 +469,31 @@ position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_s5ttm")
 one_way_collision_margin = 0.0
 
-[node name="InteractLabel" type="Label" parent="InteractionComponents"]
-texture_filter = 1
+[node name="Panel" type="Panel" parent="InteractionComponents"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = -35.0
-offset_right = 36.0
-offset_bottom = -9.0
+offset_left = -26.0
+offset_top = -31.0
+offset_right = 25.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractLabel" type="Label" parent="InteractionComponents/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -11.0
+offset_right = 36.5
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_pby16")
