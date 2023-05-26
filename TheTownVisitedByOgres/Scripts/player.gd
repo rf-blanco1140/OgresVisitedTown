@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const speed = 50
 var current_dir = "none"
+var isMoving = false
 
 @onready var all_interactions = []
 @onready var interact_label = $InteractionComponents/Panel/InteractLabel
@@ -24,55 +25,55 @@ func _unhandled_input(event: InputEvent) -> void:
 func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
-		play_anim(1)
+		isMoving = true
 		velocity.x = speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_left"):
 		current_dir = "left"
-		play_anim(1)
+		isMoving = true
 		velocity.x = -speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_down"):
 		current_dir = "down"
-		play_anim(1)
+		isMoving = true
 		velocity.y = speed
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
-		play_anim(1)
+		isMoving = true
 		velocity.y = -speed
 		velocity.x = 0
 	else:
-		play_anim(0)
+		isMoving = false
 		velocity.y = 0
 		velocity.x = 0
-	
+	play_anim()
 	move_and_slide()
 
-func play_anim(movement):
+func play_anim():
 	var dir = current_dir
 	var anim = $AnimatedSprite2D
 	
-	if dir == "right":
-		if movement == 1:
-			anim.play("walk_right")
-		elif movement == 0:
-			anim.play("idle_right")
-	if dir == "left":
-		if movement == 1:
-			anim.play("walk_left")
-		elif movement == 0:
-			anim.play("idle_left")
-	if dir == "down":
-		if movement == 1:
-			anim.play("walk_front")
-		elif movement == 0:
-			anim.play("idle_front")
-	if dir == "up":
-		if movement == 1:
-			anim.play("walk_back")
-		elif movement == 0:
-			anim.play("idle_back")
+	if isMoving == false:
+		match dir:
+			"right":
+				anim.play("idle_right")
+			"left":
+				anim.play("idle_left")
+			"down":
+				anim.play("idle_front")
+			"up":
+				anim.play("idle_back")
+	elif isMoving == true:
+		match dir:
+			"right":
+				anim.play("walk_right")
+			"left":
+				anim.play("walk_left")
+			"down":
+				anim.play("walk_front")
+			"up":
+				anim.play("walk_back")
 
 func current_camera():
 	if global.current_scene == "world":
@@ -124,3 +125,11 @@ func turn_panel_OnOff():
 		$InteractionComponents/Panel.visible = true
 	else:
 		$InteractionComponents/Panel.visible = false
+
+
+func _on_animated_sprite_2d_frame_changed():
+	pass
+	#if isMoving:
+		#match $AnimatedSprite2D.frame:
+			#0, 2:
+				#$AudioStreamPlayer2D.play()
