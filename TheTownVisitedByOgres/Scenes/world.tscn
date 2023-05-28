@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgpwmv1ifbxns"]
+[gd_scene load_steps=12 format=3 uid="uid://dgpwmv1ifbxns"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_lkho6"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="2_8qly3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://cd2w5hi1vnftd" path="res://Dialogs/PotatoBoxes.dialogue" id="7_y8ft3"]
 [ext_resource type="PackedScene" uid="uid://byspofj24xg1f" path="res://Scenes/player.tscn" id="8_komro"]
 [ext_resource type="Resource" uid="uid://rliojk4yog6e" path="res://Dialogs/RoadWagon.dialogue" id="8_s2wfn"]
+[ext_resource type="Resource" uid="uid://cfudpnk7pqe0g" path="res://Dialogs/ClothBags.dialogue" id="9_aggc7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpbfh"]
 size = Vector2(21, 36)
@@ -140,6 +141,7 @@ dialog_resoruce = ExtResource("8_s2wfn")
 [node name="Interactable" parent="Potato Caravan/Clothe Bags" instance=ExtResource("4_nexg7")]
 position = Vector2(283, 36)
 interactable_label = "Inspect"
+dialog_resoruce = ExtResource("9_aggc7")
 
 [connection signal="body_entered" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_entered"]
 [connection signal="body_exited" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_exited"]
