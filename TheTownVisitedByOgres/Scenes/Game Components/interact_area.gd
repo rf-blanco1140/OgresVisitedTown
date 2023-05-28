@@ -21,3 +21,4 @@ func interact() -> void:
 			dialog_start = "fifth_intearction"
 		num_interact_curr += 1
 	DialogueManager.show_example_dialogue_balloon(dialog_resoruce, dialog_start)
+	$AudioStreamPlayer2D.play()
