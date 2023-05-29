@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://cx0qorxke157p"]
+[gd_resource type="TileSet" load_steps=21 format=3 uid="uid://cx0qorxke157p"]
 
 [ext_resource type="Texture2D" uid="uid://c7cw32qtbpffj" path="res://Art/World of Solaria Rural Village Update 07/16x16/Tilesets/RVTerrain.png" id="1_8phec"]
 [ext_resource type="Texture2D" uid="uid://cywnfy7fxdwlu" path="res://Art/World of Solaria Rural Village Update 07/16x16/Tilesets/RVDecoration.png" id="2_5ffnl"]
@@ -7,6 +7,24 @@
 [ext_resource type="Texture2D" uid="uid://dhjlrj7g042na" path="res://Art/World of Solaria Rural Village Update 07/16x16/Tilesets/RVNature.png" id="5_yh8ak"]
 [ext_resource type="Texture2D" uid="uid://ddvx4o6casc4d" path="res://Art/World of Solaria Rural Village Update 07/16x16/Tilesets/RVRoofs.png" id="6_0aand"]
 [ext_resource type="Texture2D" uid="uid://6u50p7knofjq" path="res://Art/World of Solaria Rural Village Update 07/16x16/Tilesets/RVWalls.png" id="7_tjcyk"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_3ux82"]
+tile_data = PackedInt32Array(0, 131074, 3, 1, 196610, 3)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_mfgyf"]
+tile_data = PackedInt32Array(0, 131074, 1, 1, 196610, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_7p4fc"]
+tile_data = PackedInt32Array(0, 131074, 2, 1, 196610, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_xr3eg"]
+tile_data = PackedInt32Array(0, 131074, 0, 1, 196610, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_l1r82"]
+tile_data = PackedInt32Array(0, 131074, 3, 1, 196610, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_mup4k"]
+tile_data = PackedInt32Array(65536, 786437, 1, 131072, 786437, 2, 196608, 786437, 3, 262144, 786437, 4, 65537, 851973, 1, 131073, 851973, 2, 196609, 851973, 3, 262145, 851973, 4, 2, 917509, 0, 65538, 917509, 1, 131074, 917509, 2, 196610, 917509, 3, 3, 983045, 0, 65539, 983045, 1, 131075, 983045, 2, 196611, 983045, 3, 65540, 1048581, 1, 131076, 1048581, 2, 196612, 1048581, 3, 262148, 1048581, 4, 65541, 1114117, 1, 131077, 1114117, 2, 196613, 1114117, 3, 262149, 1114117, 4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47e21"]
 texture = ExtResource("1_8phec")
@@ -3699,3 +3717,9 @@ sources/3 = SubResource("TileSetAtlasSource_icbt0")
 sources/4 = SubResource("TileSetAtlasSource_sgkv0")
 sources/5 = SubResource("TileSetAtlasSource_w58ar")
 sources/6 = SubResource("TileSetAtlasSource_3ub3k")
+pattern_0 = SubResource("TileMapPattern_3ux82")
+pattern_1 = SubResource("TileMapPattern_mfgyf")
+pattern_2 = SubResource("TileMapPattern_7p4fc")
+pattern_3 = SubResource("TileMapPattern_xr3eg")
+pattern_4 = SubResource("TileMapPattern_l1r82")
+pattern_5 = SubResource("TileMapPattern_mup4k")
