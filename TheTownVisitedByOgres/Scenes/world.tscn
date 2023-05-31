@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dgpwmv1ifbxns"]
+[gd_scene load_steps=13 format=3 uid="uid://dgpwmv1ifbxns"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_lkho6"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="2_8qly3"]
@@ -10,11 +10,14 @@
 [ext_resource type="Resource" uid="uid://rliojk4yog6e" path="res://Dialogs/RoadWagon.dialogue" id="8_s2wfn"]
 [ext_resource type="Resource" uid="uid://cfudpnk7pqe0g" path="res://Dialogs/ClothBags.dialogue" id="9_aggc7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpbfh"]
-size = Vector2(21, 36)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kwav"]
 size = Vector2(90, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ill6i"]
+size = Vector2(19, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpbfh"]
+size = Vector2(21, 36)
 
 [node name="World" type="Node2D"]
 z_index = 1
@@ -78,13 +81,7 @@ position = Vector2(-119, 6)
 
 [node name="Collision_MapBorder" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2(-128, -128)
-polygon = PackedVector2Array(15, 0, 15, 110, -21, 110, -21, 146, 14, 146, 16, 370, 463, 370, 463, 13, 47, 15, 45, 44, 17, 45, 25, -15, 466, -6, 466.785, 0.282696, 468, 10, 484, 411, 363, 438, 1, 430, -42, 375, -37, 248, -47, 124, -27, 14, -9, -18, 7, -19)
-
-[node name="SecretEntranceTransitionPoint" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecretEntranceTransitionPoint"]
-position = Vector2(-138.5, 0)
-shape = SubResource("RectangleShape2D_kpbfh")
+polygon = PackedVector2Array(15, 0, 15, 110, -21, 110, -21, 146, 14, 146, 16, 370, 463, 370, 464, 169, 483, 169, 483, 127, 463, 127, 463, 13, 47, 15, 45, 44, 17, 45, 25, -15, 466, -6, 466.785, 0.282696, 468, 10, 509, 125, 484, 411, 363, 438, 1, 430, -42, 375, -37, 248, -47, 124, -27, 14, -9, -18, 7, -19)
 
 [node name="House" type="Node2D" parent="."]
 z_index = 2
@@ -143,5 +140,21 @@ position = Vector2(283, 36)
 interactable_label = "Inspect"
 dialog_resoruce = ExtResource("9_aggc7")
 
-[connection signal="body_entered" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_entered"]
-[connection signal="body_exited" from="SecretEntranceTransitionPoint" to="." method="_on_secret_entrance_transition_point_body_exited"]
+[node name="Scene_Transitions" type="Node2D" parent="."]
+
+[node name="TownCenter" type="Area2D" parent="Scene_Transitions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene_Transitions/TownCenter"]
+position = Vector2(345.5, 20)
+shape = SubResource("RectangleShape2D_ill6i")
+
+[node name="SecretEntrance" type="Area2D" parent="Scene_Transitions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene_Transitions/SecretEntrance"]
+position = Vector2(-138.5, 0)
+shape = SubResource("RectangleShape2D_kpbfh")
+
+[connection signal="body_entered" from="Scene_Transitions/TownCenter" to="." method="_on_town_center_body_entered"]
+[connection signal="body_exited" from="Scene_Transitions/TownCenter" to="." method="_on_town_center_body_exited"]
+[connection signal="body_entered" from="Scene_Transitions/SecretEntrance" to="." method="_on_secret_entrance_transition_point_body_entered"]
+[connection signal="body_exited" from="Scene_Transitions/SecretEntrance" to="." method="_on_secret_entrance_transition_point_body_exited"]

@@ -76,10 +76,10 @@ func play_anim():
 				anim.play("walk_back")
 
 func current_camera():
-	if global.current_scene == "world":
+	if global.current_sceneID == "liminal_road":
 		$world_camera.enabled = true
 		$sec_entrance_camera.enabled = false
-	if global.current_scene == "secret_entrance":
+	if global.current_sceneID == "secret_entrance":
 		$world_camera.enabled = false
 		$sec_entrance_camera.enabled = true
 

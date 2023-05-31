@@ -1,5 +1,6 @@
 extends Node2D
 
+var mySceneID = "secret_entrance"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +22,7 @@ func _process(delta):
 func _on_sec_entrance_exit_point_body_entered(body):
 	if body.has_method("player"):
 		global.transition_scene = true
-
+		global.nextScene = "res://Scenes/world.tscn"
 
 func _on_sec_entrance_exit_point_body_exited(body):
 	if body.has_method("player"):
@@ -29,7 +30,7 @@ func _on_sec_entrance_exit_point_body_exited(body):
 
 func change_scene():
 	if global.transition_scene == true:
-		if global.current_scene == "secret_entrance":
-			get_tree().change_scene_to_file("res://Scenes/world.tscn")
+		if global.current_sceneID == "secret_entrance":
+			get_tree().change_scene_to_file(global.nextScene)
 			global.game_first_loadin = false
-			global.finish_changescene()
+			global.finish_changescene("liminal_road")
