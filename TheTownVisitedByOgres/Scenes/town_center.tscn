@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgr6be47ynmca"]
+[gd_scene load_steps=4 format=3 uid="uid://dgr6be47ynmca"]
 
+[ext_resource type="Script" path="res://Scenes/town_center.gd" id="1_1t1ly"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="1_cveaa"]
 [ext_resource type="PackedScene" uid="uid://byspofj24xg1f" path="res://Scenes/player.tscn" id="2_qkl2c"]
 
-[node name="New Town" type="Node2D"]
+[node name="TownCenter" type="Node2D"]
+script = ExtResource("1_1t1ly")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

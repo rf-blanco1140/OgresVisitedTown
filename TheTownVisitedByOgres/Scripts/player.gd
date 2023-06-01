@@ -11,10 +11,10 @@ func _ready():
 	$AnimatedSprite2D.play("idle_right")
 	update_interactions()
 	turn_panel_OnOff()
+	current_camera()
 
 func _physics_process(delta):
 	player_movement(delta)
-	current_camera()
 ##	if Input.is_action_just_pressed("interact"):
 ##		exectute_interactions()
 
@@ -82,6 +82,15 @@ func current_camera():
 	if global.current_sceneID == "secret_entrance":
 		$world_camera.enabled = false
 		$sec_entrance_camera.enabled = true
+	
+	#$Camera2D.limit_left = global.camera_map_limits.position.x * global.camera_map_cellsize.x
+	#$Camera2D.limit_right = global.camera_map_limits.end.x * global.camera_map_cellsize.x
+	#$Camera2D.limit_left = global.camera_map_limits.position.y * global.camera_map_cellsize.y
+	#$Camera2D.limit_left = global.camera_map_limits.end.y * global.camera_map_cellsize.y
+	
+	$sec_entrance_camera.enabled = false
+	$world_camera.enabled = false
+	$Camera2D.enabled = true
 
 func player():
 	pass
