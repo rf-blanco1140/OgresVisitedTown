@@ -1,10 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dgr6be47ynmca"]
+[gd_scene load_steps=21 format=3 uid="uid://dgr6be47ynmca"]
 
 [ext_resource type="Script" path="res://Scenes/town_center.gd" id="1_1t1ly"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="1_cveaa"]
 [ext_resource type="PackedScene" uid="uid://byspofj24xg1f" path="res://Scenes/player.tscn" id="2_qkl2c"]
 [ext_resource type="PackedScene" uid="uid://40ly7256lslb" path="res://Scenes/Game Components/interact_area.tscn" id="4_eanwq"]
 [ext_resource type="Resource" uid="uid://bgb4v4k834hbu" path="res://Dialogs/TownCenter/House1_Door.dialogue" id="5_uy32j"]
+[ext_resource type="Resource" uid="uid://dtx0ckk8am2qc" path="res://Dialogs/TownCenter/House2_Door.dialogue" id="6_cpg2o"]
+[ext_resource type="Resource" uid="uid://bsdpyrplu8vu4" path="res://Dialogs/TownCenter/House2_OldLady_Left.dialogue" id="7_ac0t4"]
+[ext_resource type="Resource" uid="uid://bhwks21jelx7u" path="res://Dialogs/TownCenter/House3_Door.dialogue" id="7_ee6yj"]
+[ext_resource type="Resource" uid="uid://c43dqccgdd4nv" path="res://Dialogs/TownCenter/House2_OldLady_Right.dialogue" id="8_tytqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61tx3"]
 size = Vector2(124, 60)
@@ -126,6 +130,7 @@ shape = SubResource("RectangleShape2D_0w7kn")
 position = Vector2(-8, 11)
 interactable_label = "Inspect "
 dialog_resoruce = ExtResource("5_uy32j")
+num_interact_total = 2
 
 [node name="Tombstones" type="Node2D" parent="Houses/Blue Houses/House 1/Interactions"]
 
@@ -158,10 +163,24 @@ shape = SubResource("RectangleShape2D_61tx3")
 [node name="Door" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
 position = Vector2(-8, 11)
 interactable_label = "Inspect"
+dialog_resoruce = ExtResource("6_cpg2o")
 
 [node name="Toombstone" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
 position = Vector2(-40, -75)
 scale = Vector2(0.4, 0.4)
+
+[node name="OldLady_Left" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
+position = Vector2(14, 30)
+scale = Vector2(0.4, 0.4)
+interactable_label = "Talk"
+dialog_resoruce = ExtResource("7_ac0t4")
+num_interact_total = 4
+
+[node name="OldLady_Right" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
+position = Vector2(34, 30)
+scale = Vector2(0.4, 0.4)
+interactable_label = "Talk"
+dialog_resoruce = ExtResource("8_tytqv")
 
 [node name="House 3" type="Node2D" parent="Houses/Blue Houses"]
 position = Vector2(464, -81)
@@ -175,6 +194,7 @@ shape = SubResource("RectangleShape2D_61tx3")
 [node name="Interactable" parent="Houses/Blue Houses/House 3" instance=ExtResource("4_eanwq")]
 position = Vector2(-8, 11)
 interactable_label = "Inspect"
+dialog_resoruce = ExtResource("7_ee6yj")
 
 [node name="House 4" type="Node2D" parent="Houses/Blue Houses"]
 position = Vector2(624, -81)
@@ -190,6 +210,7 @@ shape = SubResource("RectangleShape2D_61tx3")
 [node name="Door" parent="Houses/Blue Houses/House 4/Collisions" instance=ExtResource("4_eanwq")]
 position = Vector2(-8, 11)
 interactable_label = "Inspect"
+num_interact_total = 2
 
 [node name="Toombstones" type="Node2D" parent="Houses/Blue Houses/House 4/Collisions"]
 
@@ -212,6 +233,8 @@ shape = SubResource("RectangleShape2D_potjg")
 
 [node name="Interactable" parent="Houses/Blue Houses/House 5" instance=ExtResource("4_eanwq")]
 position = Vector2(-21, 0)
+interactable_label = "Inspect"
+num_interact_total = 2
 
 [node name="Red Houses" type="Node2D" parent="Houses"]
 

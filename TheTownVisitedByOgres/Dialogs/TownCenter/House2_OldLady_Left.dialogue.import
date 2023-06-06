@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bsdpyrplu8vu4"
+path="res://.godot/imported/House2_OldLady_Left.dialogue-f1bcd31dc45678a3c5e29d043d61fe1c.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House2_OldLady_Left.dialogue"
+dest_files=["res://.godot/imported/House2_OldLady_Left.dialogue-f1bcd31dc45678a3c5e29d043d61fe1c.tres"]
+
+[params]
+
