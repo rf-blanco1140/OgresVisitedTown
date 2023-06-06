@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b4g2pamvuw6mf"
+path="res://.godot/imported/HillAxe.dialogue-66d7bca8f26e005e89df2f4131163929.tres"
+
+[deps]
+
+source_file="res://Dialogs/LiminalRoad/HillAxe.dialogue"
+dest_files=["res://.godot/imported/HillAxe.dialogue-66d7bca8f26e005e89df2f4131163929.tres"]
+
+[params]
+

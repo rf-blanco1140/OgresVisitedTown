@@ -41,7 +41,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogs/NoReturn.dialogue", "res://Dialogs/HillStorageHouse.dialogue", "res://Dialogs/HillAxe.dialogue", "res://Dialogs/Example.dialogue", "res://Dialogs/PotatoBoxes.dialogue", "res://Dialogs/RoadWagon.dialogue", "res://Dialogs/ClothBags.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogs/NoReturn.dialogue", "res://Dialogs/HillStorageHouse.dialogue", "res://Dialogs/HillAxe.dialogue", "res://Dialogs/Example.dialogue", "res://Dialogs/PotatoBoxes.dialogue", "res://Dialogs/RoadWagon.dialogue", "res://Dialogs/ClothBags.dialogue", "res://Dialogs/TownCenter/House1_Door.dialogue", "res://Dialogs/TownCenter/NewTownEntrance/NoReturn.dialogue", "res://Dialogs/NewTownEntrance/NoReturn.dialogue", "res://Dialogs/LiminalRoad/ClothBags.dialogue", "res://Dialogs/LiminalRoad/Example.dialogue", "res://Dialogs/LiminalRoad/HillAxe.dialogue", "res://Dialogs/LiminalRoad/HillStorageHouse.dialogue", "res://Dialogs/LiminalRoad/PotatoBoxes.dialogue", "res://Dialogs/LiminalRoad/RoadWagon.dialogue", "res://NewTownEntrance/NoReturn.dialogue")
 
 [layer_names]
 

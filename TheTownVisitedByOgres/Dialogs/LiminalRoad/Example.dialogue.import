@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bsg8aootfecnu"
+path="res://.godot/imported/Example.dialogue-87f441766e22719d264560446141d763.tres"
+
+[deps]
+
+source_file="res://Dialogs/LiminalRoad/Example.dialogue"
+dest_files=["res://.godot/imported/Example.dialogue-87f441766e22719d264560446141d763.tres"]
+
+[params]
+

@@ -1,14 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgpwmv1ifbxns"]
+[gd_scene load_steps=13 format=3 uid="uid://chc5tbfd86n8g"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_lkho6"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="2_8qly3"]
-[ext_resource type="PackedScene" uid="uid://o82thxf3f15u" path="res://Scenes/Game Components/interact_area.tscn" id="4_nexg7"]
-[ext_resource type="Resource" uid="uid://cds3hhr7ftj78" path="res://Dialogs/HillStorageHouse.dialogue" id="5_0rr3v"]
-[ext_resource type="Resource" uid="uid://b4g2pamvuw6mf" path="res://Dialogs/HillAxe.dialogue" id="6_y5psd"]
-[ext_resource type="Resource" uid="uid://cd2w5hi1vnftd" path="res://Dialogs/PotatoBoxes.dialogue" id="7_y8ft3"]
+[ext_resource type="PackedScene" uid="uid://40ly7256lslb" path="res://Scenes/Game Components/interact_area.tscn" id="4_nexg7"]
+[ext_resource type="Resource" uid="uid://cds3hhr7ftj78" path="res://Dialogs/LiminalRoad/HillStorageHouse.dialogue" id="5_mkyfu"]
+[ext_resource type="Resource" uid="uid://b4g2pamvuw6mf" path="res://Dialogs/LiminalRoad/HillAxe.dialogue" id="6_u5kkq"]
+[ext_resource type="Resource" uid="uid://cd2w5hi1vnftd" path="res://Dialogs/LiminalRoad/PotatoBoxes.dialogue" id="7_8ndpl"]
 [ext_resource type="PackedScene" uid="uid://byspofj24xg1f" path="res://Scenes/player.tscn" id="8_komro"]
-[ext_resource type="Resource" uid="uid://rliojk4yog6e" path="res://Dialogs/RoadWagon.dialogue" id="8_s2wfn"]
-[ext_resource type="Resource" uid="uid://cfudpnk7pqe0g" path="res://Dialogs/ClothBags.dialogue" id="9_aggc7"]
+[ext_resource type="Resource" uid="uid://rliojk4yog6e" path="res://Dialogs/LiminalRoad/RoadWagon.dialogue" id="8_mdg6d"]
+[ext_resource type="Resource" uid="uid://cfudpnk7pqe0g" path="res://Dialogs/LiminalRoad/ClothBags.dialogue" id="9_u24kk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kwav"]
 size = Vector2(90, 57)
@@ -101,12 +101,12 @@ polygon = PackedVector2Array(11, 11, -25.2613, 11, -35, 7, -34, -72.3534, -30, -
 [node name="Door" parent="House/Interactions" instance=ExtResource("4_nexg7")]
 position = Vector2(120, -49)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("5_0rr3v")
+dialog_resoruce = ExtResource("5_mkyfu")
 
 [node name="Axe" parent="House/Interactions" instance=ExtResource("4_nexg7")]
 position = Vector2(167, -24)
 interactable_label = "Inspect "
-dialog_resoruce = ExtResource("6_y5psd")
+dialog_resoruce = ExtResource("6_u5kkq")
 num_interact_total = 2
 
 [node name="Potato Caravan" type="Node2D" parent="."]
@@ -116,7 +116,7 @@ num_interact_total = 2
 [node name="Interactable" parent="Potato Caravan/Potato Boxes" instance=ExtResource("4_nexg7")]
 position = Vector2(248, 32)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("7_y8ft3")
+dialog_resoruce = ExtResource("7_8ndpl")
 num_interact_total = 4
 
 [node name="Road Wagon 1" type="Node2D" parent="Potato Caravan"]
@@ -124,21 +124,21 @@ num_interact_total = 4
 [node name="Interactable" parent="Potato Caravan/Road Wagon 1" instance=ExtResource("4_nexg7")]
 position = Vector2(220, 37)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("8_s2wfn")
+dialog_resoruce = ExtResource("8_mdg6d")
 
 [node name="Road Wagon 2" type="Node2D" parent="Potato Caravan"]
 
 [node name="Interactable" parent="Potato Caravan/Road Wagon 2" instance=ExtResource("4_nexg7")]
 position = Vector2(285, 61)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("8_s2wfn")
+dialog_resoruce = ExtResource("8_mdg6d")
 
 [node name="Clothe Bags" type="Node2D" parent="Potato Caravan"]
 
 [node name="Interactable" parent="Potato Caravan/Clothe Bags" instance=ExtResource("4_nexg7")]
 position = Vector2(283, 36)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("9_aggc7")
+dialog_resoruce = ExtResource("9_u24kk")
 
 [node name="Scene_Transitions" type="Node2D" parent="."]
 

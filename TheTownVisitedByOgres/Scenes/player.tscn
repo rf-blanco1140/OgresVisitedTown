@@ -427,7 +427,7 @@ y_sort_enabled = true
 script = ExtResource("1_w1efo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
+z_index = 10
 sprite_frames = SubResource("SpriteFrames_yjurw")
 animation = &"walk_back"
 offset = Vector2(0, -8)

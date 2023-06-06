@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://cfudpnk7pqe0g"
+path="res://.godot/imported/ClothBags.dialogue-92350f580c049767d4c97e0ae9f135d7.tres"
+
+[deps]
+
+source_file="res://Dialogs/LiminalRoad/ClothBags.dialogue"
+dest_files=["res://.godot/imported/ClothBags.dialogue-92350f580c049767d4c97e0ae9f135d7.tres"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://cpt0yjy3acgog"
+path="res://.godot/imported/NoReturn.dialogue-fd0feb83a46449bb31c7739e6a05a8ff.tres"
+
+[deps]
+
+source_file="res://Dialogs/NewTownEntrance/NoReturn.dialogue"
+dest_files=["res://.godot/imported/NoReturn.dialogue-fd0feb83a46449bb31c7739e6a05a8ff.tres"]
+
+[params]
+

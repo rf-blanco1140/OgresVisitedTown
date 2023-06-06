@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://rliojk4yog6e"
+path="res://.godot/imported/RoadWagon.dialogue-5cc3d2d1934013075622584305b50658.tres"
+
+[deps]
+
+source_file="res://Dialogs/LiminalRoad/RoadWagon.dialogue"
+dest_files=["res://.godot/imported/RoadWagon.dialogue-5cc3d2d1934013075622584305b50658.tres"]
+
+[params]
+

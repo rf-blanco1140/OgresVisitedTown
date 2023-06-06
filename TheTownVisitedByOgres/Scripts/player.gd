@@ -82,12 +82,6 @@ func current_camera():
 	if global.current_sceneID == "secret_entrance":
 		$world_camera.enabled = false
 		$sec_entrance_camera.enabled = true
-	
-	#$Camera2D.limit_left = global.camera_map_limits.position.x * global.camera_map_cellsize.x
-	#$Camera2D.limit_right = global.camera_map_limits.end.x * global.camera_map_cellsize.x
-	#$Camera2D.limit_left = global.camera_map_limits.position.y * global.camera_map_cellsize.y
-	#$Camera2D.limit_left = global.camera_map_limits.end.y * global.camera_map_cellsize.y
-	
 	$sec_entrance_camera.enabled = false
 	$world_camera.enabled = false
 	$Camera2D.enabled = true
@@ -125,10 +119,8 @@ func exectute_interactions():
 func turn_interactLabel_OnOff():
 	if all_interactions[0].num_interact_total == all_interactions[0].num_interact_curr:
 		$InteractionComponents/Panel/InteractLabel.add_theme_color_override("font_color", Color.GRAY)
-		print("No Interactions")
 	else:
 		$InteractionComponents/Panel/InteractLabel.add_theme_color_override("font_color", Color.WHITE)
-		print("Yes Interactions!")
 func turn_panel_OnOff():
 	if all_interactions:
 		$InteractionComponents/Panel.visible = true
