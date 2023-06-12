@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://cb1uaqxtebvw5"]
+
+[ext_resource type="Texture2D" uid="uid://bexh7pbsu56yk" path="res://Art/Sprite Pack Update 02.1/Old/16x16/Villagers/Villager 04a.png" id="1_31yk2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a6t4"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnpeh"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aid0r"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gjm8"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtv0u"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v4r7"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycqoj"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbxwi"]
+atlas = ExtResource("1_31yk2")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5u6b3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a6t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnpeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aid0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gjm8")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtv0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v4r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycqoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbxwi")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 2.0
+}]
+
+[node name="NPC_Static" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5u6b3")
+animation = &"idle_front"
