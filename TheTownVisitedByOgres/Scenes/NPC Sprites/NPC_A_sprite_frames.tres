@@ -1,0 +1,72 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://bvsirx4thnhcf"]
+
+[ext_resource type="Texture2D" uid="uid://bexh7pbsu56yk" path="res://Art/Sprite Pack Update 02.1/Old/16x16/Villagers/Villager 04a.png" id="1_clox3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0jep"]
+atlas = ExtResource("1_clox3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4uik"]
+atlas = ExtResource("1_clox3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cviab"]
+atlas = ExtResource("1_clox3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbrdb"]
+atlas = ExtResource("1_clox3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aceh"]
+atlas = ExtResource("1_clox3")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nd2hs"]
+atlas = ExtResource("1_clox3")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pqq8"]
+atlas = ExtResource("1_clox3")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nskk4"]
+atlas = ExtResource("1_clox3")
+region = Rect2(48, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0jep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4uik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cviab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbrdb")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aceh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nd2hs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pqq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nskk4")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}]

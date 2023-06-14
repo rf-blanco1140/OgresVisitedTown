@@ -74,6 +74,7 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "0", extra
 	# If our dialogue is nothing then we hit the end
 	if not is_valid(dialogue):
 		dialogue_ended.emit(resource)
+		global.notify_RegisteredInteraction_Ended()
 		return null
 
 	# Run the mutation if it is one

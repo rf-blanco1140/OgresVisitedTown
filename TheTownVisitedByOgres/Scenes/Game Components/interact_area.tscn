@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://40ly7256lslb"]
+[gd_scene load_steps=6 format=3 uid="uid://40ly7256lslb"]
 
 [ext_resource type="Script" path="res://Scenes/Game Components/interact_area.gd" id="1_gjljx"]
 [ext_resource type="Resource" uid="uid://cpt0yjy3acgog" path="res://Dialogs/NewTownEntrance/NoReturn.dialogue" id="2_urarn"]
 [ext_resource type="AudioStream" uid="uid://7wal2vg8hwyx" path="res://Sounds/SFX/Menu Confirm.wav" id="3_at1g7"]
+[ext_resource type="PackedScene" uid="uid://cb1uaqxtebvw5" path="res://Scenes/npc_static.tscn" id="4_fxa1w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qfolx"]
 
@@ -15,7 +16,10 @@ script = ExtResource("1_gjljx")
 dialog_resoruce = ExtResource("2_urarn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_qfolx")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_at1g7")
+
+[node name="NPC_Static" parent="." instance=ExtResource("4_fxa1w")]
