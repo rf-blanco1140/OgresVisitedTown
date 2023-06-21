@@ -101,7 +101,7 @@ dialog_resoruce = ExtResource("5_mkyfu")
 position = Vector2(167, -24)
 interactable_label = "Inspect "
 dialog_resoruce = ExtResource("6_u5kkq")
-num_interact_total = 2
+num_interact_total = 3
 
 [node name="Potato Caravan" type="Node2D" parent="."]
 
