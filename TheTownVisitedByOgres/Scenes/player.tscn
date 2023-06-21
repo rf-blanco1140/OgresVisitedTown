@@ -410,7 +410,7 @@ animations = [{
 radius = 2.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s5ttm"]
-radius = 14.0
+radius = 8.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_x1wdh"]
 streams_count = 3
