@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dxrl5shrbkccq"
+path="res://.godot/imported/House4_Door.dialogue-221f792f894509824f00f3db319992c3.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House 4/House4_Door.dialogue"
+dest_files=["res://.godot/imported/House4_Door.dialogue-221f792f894509824f00f3db319992c3.tres"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bn8ykusqr801y"
+path="res://.godot/imported/House1_Toombstone_Daughter.dialogue-06b718b66552fde0c967da21b1e80b96.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House 1/House1_Toombstone_Daughter.dialogue"
+dest_files=["res://.godot/imported/House1_Toombstone_Daughter.dialogue-06b718b66552fde0c967da21b1e80b96.tres"]
+
+[params]
+

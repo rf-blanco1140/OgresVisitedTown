@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dfjfv15lmuklo"
+path="res://.godot/imported/House5_Door.dialogue-e7f5205733deb8e25b7076078ca84c4c.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House 5/House5_Door.dialogue"
+dest_files=["res://.godot/imported/House5_Door.dialogue-e7f5205733deb8e25b7076078ca84c4c.tres"]
+
+[params]
+

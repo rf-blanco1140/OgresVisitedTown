@@ -1,15 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://dgr6be47ynmca"]
+[gd_scene load_steps=20 format=3 uid="uid://cp220rrfmcyws"]
 
 [ext_resource type="Script" path="res://Scenes/town_center.gd" id="1_1t1ly"]
 [ext_resource type="TileSet" uid="uid://cx0qorxke157p" path="res://Art/TileSets/world.tres" id="1_cveaa"]
 [ext_resource type="PackedScene" uid="uid://byspofj24xg1f" path="res://Scenes/player.tscn" id="2_qkl2c"]
 [ext_resource type="PackedScene" uid="uid://40ly7256lslb" path="res://Scenes/Game Components/interact_area.tscn" id="4_eanwq"]
-[ext_resource type="Resource" uid="uid://bgb4v4k834hbu" path="res://Dialogs/TownCenter/House1_Door.dialogue" id="5_uy32j"]
-[ext_resource type="Resource" uid="uid://dtx0ckk8am2qc" path="res://Dialogs/TownCenter/House2_Door.dialogue" id="6_cpg2o"]
-[ext_resource type="Resource" uid="uid://bsdpyrplu8vu4" path="res://Dialogs/TownCenter/House2_OldLady_Left.dialogue" id="7_ac0t4"]
-[ext_resource type="Resource" uid="uid://bhwks21jelx7u" path="res://Dialogs/TownCenter/House3_Door.dialogue" id="7_ee6yj"]
+[ext_resource type="Resource" uid="uid://dtx0ckk8am2qc" path="res://Dialogs/TownCenter/House 2/House2_Door.dialogue" id="5_b8hjs"]
+[ext_resource type="Resource" uid="uid://bsdpyrplu8vu4" path="res://Dialogs/TownCenter/House 2/House2_OldLady_Left.dialogue" id="6_xeuo3"]
 [ext_resource type="SpriteFrames" uid="uid://bvsirx4thnhcf" path="res://Scenes/NPC Sprites/NPC_A_sprite_frames.tres" id="8_85aq8"]
-[ext_resource type="Resource" uid="uid://c43dqccgdd4nv" path="res://Dialogs/TownCenter/House2_OldLady_Right.dialogue" id="8_tytqv"]
+[ext_resource type="Resource" uid="uid://c43dqccgdd4nv" path="res://Dialogs/TownCenter/House 2/House2_OldLady_Right.dialogue" id="8_laeh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61tx3"]
 size = Vector2(124, 60)
@@ -130,7 +128,7 @@ shape = SubResource("RectangleShape2D_0w7kn")
 [node name="Door" parent="Houses/Blue Houses/House 1/Interactions" instance=ExtResource("4_eanwq")]
 position = Vector2(-8, 16)
 interactable_label = "Inspect "
-dialog_resoruce = ExtResource("5_uy32j")
+dialog_resoruce = null
 num_interact_total = 2
 
 [node name="Tombstones" type="Node2D" parent="Houses/Blue Houses/House 1/Interactions"]
@@ -147,6 +145,12 @@ interactable_label = "Inspect"
 position = Vector2(-88, -74)
 interactable_label = "Inspect"
 
+[node name="Grand Father" parent="Houses/Blue Houses/House 1/Interactions/Tombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(-88, -43)
+
+[node name="Aunt" parent="Houses/Blue Houses/House 1/Interactions/Tombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(-72, -42)
+
 [node name="House 2" type="Node2D" parent="Houses/Blue Houses"]
 position = Vector2(304, -81)
 
@@ -161,7 +165,7 @@ shape = SubResource("RectangleShape2D_61tx3")
 [node name="Door" parent="Houses/Blue Houses/House 2/Interactions" node_paths=PackedStringArray("external_listener") instance=ExtResource("4_eanwq")]
 position = Vector2(-8, 17)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("6_cpg2o")
+dialog_resoruce = ExtResource("5_b8hjs")
 external_listener = NodePath("../OldLady_Left")
 
 [node name="Toombstone" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
@@ -170,7 +174,7 @@ position = Vector2(-40, -75)
 [node name="OldLady_Left" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
 position = Vector2(14, 30)
 interactable_label = "Talk"
-dialog_resoruce = ExtResource("7_ac0t4")
+dialog_resoruce = ExtResource("6_xeuo3")
 num_interact_total = 4
 sprite = ExtResource("8_85aq8")
 idle_anim_ID = "idle_front"
@@ -179,7 +183,7 @@ listening_anim_ID = "idle_left"
 [node name="OldLady_Right" parent="Houses/Blue Houses/House 2/Interactions" instance=ExtResource("4_eanwq")]
 position = Vector2(34, 30)
 interactable_label = "Talk"
-dialog_resoruce = ExtResource("8_tytqv")
+dialog_resoruce = ExtResource("8_laeh5")
 
 [node name="House 3" type="Node2D" parent="Houses/Blue Houses"]
 position = Vector2(464, -81)
@@ -193,7 +197,7 @@ shape = SubResource("RectangleShape2D_61tx3")
 [node name="Interactable" parent="Houses/Blue Houses/House 3" instance=ExtResource("4_eanwq")]
 position = Vector2(-8, 16)
 interactable_label = "Inspect"
-dialog_resoruce = ExtResource("7_ee6yj")
+dialog_resoruce = null
 
 [node name="House 4" type="Node2D" parent="Houses/Blue Houses"]
 position = Vector2(624, -81)
@@ -213,13 +217,29 @@ num_interact_total = 2
 
 [node name="Toombstones" type="Node2D" parent="Houses/Blue Houses/House 4/Collisions"]
 
-[node name="Brother" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+[node name="Son 13" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
 position = Vector2(56, -75)
-scale = Vector2(0.4, 0.4)
 
-[node name="Sister" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+[node name="Daughter 15" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
 position = Vector2(40, -75)
-scale = Vector2(0.4, 0.4)
+
+[node name="Daughter 11" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(72, -42)
+
+[node name="Daughter 10" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(88, -74)
+
+[node name="Mother" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(72, -74)
+
+[node name="Grand Mother" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(-41, -75)
+
+[node name="Grand Father" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(-56, -74)
+
+[node name="Father" parent="Houses/Blue Houses/House 4/Collisions/Toombstones" instance=ExtResource("4_eanwq")]
+position = Vector2(88, -43)
 
 [node name="House 5" type="Node2D" parent="Houses/Blue Houses"]
 position = Vector2(647, 119)

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bhwks21jelx7u"
+path="res://.godot/imported/House3_Door.dialogue-3120c054875557f2d414278c62a5cc33.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House 3/House3_Door.dialogue"
+dest_files=["res://.godot/imported/House3_Door.dialogue-3120c054875557f2d414278c62a5cc33.tres"]
+
+[params]
+
