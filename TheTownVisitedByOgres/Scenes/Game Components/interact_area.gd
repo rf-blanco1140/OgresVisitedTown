@@ -38,7 +38,8 @@ func interact() -> void:
 	$AudioStreamPlayer2D.play()
 
 func unsubscribeListeners():
-	external_listener.stopListeningInteraction()
+	if(external_listener):
+		external_listener.stopListeningInteraction()
 
 func stopListeningInteraction():
 	if(idle_anim_ID != "none"):
