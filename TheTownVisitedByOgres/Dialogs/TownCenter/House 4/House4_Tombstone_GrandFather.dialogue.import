@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://do57kolhsh4dk"
+path="res://.godot/imported/House4_Tombstone_GrandFather.dialogue-e84f930b561eddf7ee606f63c0dfe349.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House 4/House4_Tombstone_GrandFather.dialogue"
+dest_files=["res://.godot/imported/House4_Tombstone_GrandFather.dialogue-e84f930b561eddf7ee606f63c0dfe349.tres"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://c0tufm75oohxd"
+path="res://.godot/imported/House4_Tombstone_Son13.dialogue-570610f6d7479aaa2d5ec8bb5e52d782.tres"
+
+[deps]
+
+source_file="res://Dialogs/TownCenter/House 4/House4_Tombstone_Son13.dialogue"
+dest_files=["res://.godot/imported/House4_Tombstone_Son13.dialogue-570610f6d7479aaa2d5ec8bb5e52d782.tres"]
+
+[params]
+
